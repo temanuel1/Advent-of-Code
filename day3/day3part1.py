@@ -21,7 +21,7 @@ for i in range(len(updatedList[0])):
     #print (zeroes, ones)
     if zeroes > ones:
         gammaRate += "0"
-        epsilonRate += "1"
+        epsilonRate += "1"  
     else:
         gammaRate += "1"
         epsilonRate += "0"
@@ -31,4 +31,4 @@ for i in range(len(updatedList[0])):
 ##print (gammaRate, epsilonRate)
 
 
-print (binaryToDecimal(gammaRate) * binaryToDecimal(epsilonRate))
+print ("The power consumption is: " + str(binaryToDecimal(gammaRate) * binaryToDecimal(epsilonRate)))
