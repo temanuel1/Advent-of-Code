@@ -8,8 +8,8 @@ def binaryToDecimal(n):
 
 zeroes = 0
 ones = 0
-gammaRate = ""
-epsilonRate = ""
+gammaRate = ''
+epsilonRate = ''
 
 for i in range(len(updatedList[0])):
     for j in range(len(updatedList)):
