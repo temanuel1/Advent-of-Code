@@ -7,6 +7,7 @@ c = 0
 zeroes = 0
 ones = 0
 
+
 def binaryToDecimal(n):
     return int(n,2)
 
@@ -21,6 +22,7 @@ def co2Scrub(moreOnes, c):
         return list(filter(lambda binary: binary[c] == '0', binList2))
     else:
         return list(filter(lambda binary: binary[c] == '1', binList2))
+
 
 while c < 12:
     for binary in binList:
