@@ -20,5 +20,6 @@ for n in numbers:
 
 for n in range(0, 256):
     state = next_state(state)
+    print(state)
 
 print(sum(state.values()))
