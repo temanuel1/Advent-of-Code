@@ -1,22 +1,24 @@
-f = open('2021/day6/nums.txt', 'r')
-content = f.read()
-##print(content)
+from collections import defaultdict
 
-updatedList = content.split(",")
-integer_map = map(int, updatedList)
-intList = list(integer_map)
+def next_state(state):
+    new = defaultdict(int)
+    new[7] = state[8]
+    new[6] = state[7] + state[0]
+    new[5] = state[6]
+    new[4] = state[5]
+    new[3] = state[4]
+    new[2] = state[3]
+    new[1] = state[2]
+    new[0] = state[1]
+    new[8] = state[0]
+    return new
 
+numbers = [l.strip() for l in open("2021/day6/nums.txt", "r").readlines()][0].split(',')
+state = defaultdict(int)
+for n in numbers:
+    state[int(n)] += 1
 
-c = 0
+for n in range(0, 256):
+    state = next_state(state)
 
-while c < 256:
-    for num in range(len(intList)):
-        if intList[num] == 0:
-            intList.append(8)
-            intList[num] = 6
-        else:
-            intList[num] -= 1
-    print(c)
-    c += 1
-
-print(len(intList))
+print(sum(state.values()))
