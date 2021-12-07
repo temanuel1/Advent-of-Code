@@ -3,7 +3,7 @@ content = f.read()
 ##print(content)
 
 totalFuel = 0
-result = 1000000000
+result = 1e9
 
 numList = content.split(",")
 integer_map = map(int, numList)
