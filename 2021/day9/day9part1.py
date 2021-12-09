@@ -79,7 +79,7 @@ for i in range(len(finalNumList)):
             if leftDefaultLow(i):              
                 #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
-        elif (i + 1) % 100 == 0:
+        elif (i + 1) % numsInLine == 0:
             #print(str(i) + " is divisible by " + str(numsInLine - 1))
             #print("Num at i " + str(finalNumList[i]))
             #print(i)
