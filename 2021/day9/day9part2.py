@@ -69,4 +69,4 @@ for row in range(len(matrix)):
 
 lol.sort()
 
-print(lol[-1]*lol[-2]*lol[-3])
+print("Part 2 Answer: " + str(lol[-1]*lol[-2]*lol[-3]))

@@ -51,45 +51,33 @@ for i in range(len(finalNumList)):
     if isUp(i):
         if i == 0:
             if topLeftLow(i):
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
         elif i == (numsInLine - 1):
             if topRightLow(i):
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
         else:
             if topDefaultLow(i):
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
     elif isDown(i):
         if i % numsInLine == 0:
             if bottomLeftLow(i) :
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
         elif i == (len(finalNumList) - 1):
             if bottomRightLow(i):
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
         else:
-            if bottomDefaultLow(i):
-                #print("Low point at index: " + str(i))
+            if bottomDefaultLow(i):   
                 riskLevel += (1+int(finalNumList[i]))
     else:
         if i % numsInLine == 0:
             if leftDefaultLow(i):              
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
         elif (i + 1) % numsInLine == 0:
-            #print(str(i) + " is divisible by " + str(numsInLine - 1))
-            #print("Num at i " + str(finalNumList[i]))
-            #print(i)
             if rightDefaultLow(i):
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
         else:
             if default(i):
-                #print("Low point at index: " + str(i))
                 riskLevel += (1+int(finalNumList[i]))
 
 
-print("Answer: " + str(riskLevel))
+print("Part 1 Answer: " + str(riskLevel))
