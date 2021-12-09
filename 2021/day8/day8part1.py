@@ -25,6 +25,3 @@ for entry in updatedList:
             uniqueOutput+=1
 
 print("Answer is: " + str(uniqueOutput))
-
-
-

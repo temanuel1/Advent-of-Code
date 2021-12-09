@@ -77,6 +77,3 @@ for prob in data:
     completeTotal+=total
 
 print("Answer is: " + str(completeTotal))
-
-
- 
