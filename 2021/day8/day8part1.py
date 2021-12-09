@@ -12,19 +12,19 @@ for entry in updatedList:
     output = output.split(" ")
     for thing in output:
         if len(thing) == 2:
-            print(thing + " is unique")
+            #print(thing + " is unique")
             uniqueOutput+=1
         elif len(thing) == 3:
-            print(thing + " is unique")
+            #print(thing + " is unique")
             uniqueOutput+=1
         elif len(thing) == 4:
-            print(thing + " is unique")
+            #print(thing + " is unique")
             uniqueOutput+=1
         elif len(thing) == 7:
-            print(thing + " is unique")
+            #print(thing + " is unique")
             uniqueOutput+=1
 
-print(uniqueOutput)
+print("Answer is: " + str(uniqueOutput))
 
 
 
