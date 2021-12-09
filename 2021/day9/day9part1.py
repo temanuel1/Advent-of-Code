@@ -3,14 +3,13 @@ content = f.read()
 numList = content
 lines = numList.split("\n")
 numsInLine = len(lines[0])
-#print(numsInLine)
 A = 1
 riskLevel = 0
 finalNumList = []
 for line in lines:
     for i in range(0, len(line), A):
-        # convert to int, after the slicing process
         finalNumList.append(int(line[i : i + A]))
+
 
 def isUp(i):
     return i < numsInLine
@@ -45,7 +44,6 @@ def rightDefaultLow(i):
 def default(i):
     return finalNumList[i] < finalNumList[i+1] and finalNumList[i] < finalNumList[i-1] and finalNumList[i] < finalNumList[i-numsInLine] and finalNumList[i] < finalNumList[i+numsInLine]
   
-#print(len(finalNumList))
 
 for i in range(len(finalNumList)):
     if isUp(i):
@@ -78,6 +76,5 @@ for i in range(len(finalNumList)):
         else:
             if default(i):
                 riskLevel += (1+int(finalNumList[i]))
-
 
 print("Part 1 Answer: " + str(riskLevel))
