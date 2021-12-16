@@ -1,5 +1,3 @@
-from os import sep
-
 f = open('2020/day2/input.txt', 'r')
 content = f.read()
 
