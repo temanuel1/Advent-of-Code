@@ -1,1 +1,1 @@
-This is my AOC Solutions in Python
+This are my AOC Solutions in Python
